@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body class="login-signup--page">
-    <section class="login-signup--box">
+    <!-- <section class="login-signup--box">
       <h1>Login</h1>
       <p>Add your details below to get back into the app</p>
 
@@ -75,6 +75,78 @@
           <a href="/register.html">Create account</a>
         </p>
       </div>
+    </section> -->
+
+    <section class="login-signup--box">
+      <h1>Login</h1>
+      <p>Add your details below to get back into the app</p>
+
+      <div class="login-signup--form">
+        <form class="form--box" id="loginForm" action="/login" method="POST">
+          <div class="label--box">
+            <label for="email">Email address </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g. saugat@example.com"
+              required
+            />
+          </div>
+          <div class="label--box">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <button type="submit" id="loginBtn">Log in</button>
+        </form>
+
+        <p class="text-center">
+          Don't have an account?
+          <a href="/register.html">Create account</a>
+        </p>
+      </div>
     </section>
+
+    <script>
+      const loginForm = document.getElementById("loginForm");
+      const loginBtn = document.getElementById("loginBtn");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+
+      loginForm.addEventListener("submit", function (event) {
+        // Prevent form submission if any validation fails
+        if (
+          !validateEmail(emailInput.value) ||
+          !validatePassword(passwordInput.value)
+        ) {
+          event.preventDefault();
+        }
+      });
+
+      function validateEmail(email) {
+        // Basic email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address");
+          return false;
+        }
+        return true;
+      }
+
+      function validatePassword(password) {
+        // Password must have at least 8 characters
+        if (password.length < 8) {
+          alert("Password must be at least 8 characters long");
+          return false;
+        }
+        return true;
+      }
+    </script>
   </body>
 </html>
