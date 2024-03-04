@@ -1,0 +1,175 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Variables  */
+:root {
+
+    /* fonts listing  */
+    --font-base: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif";
+    --font-primary: "Instrument Sans", sans-serif;
+
+
+    /* colors listing  */
+    --color-light: #ffffff;
+    --color-darklight: #fafafa;
+    --color-blue: #633cff;
+    --color-lightblue: #eeebfe;
+    --color-primary: #333333;
+    --color-secondary: #737373;
+
+}
+
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    background-color: var(--color-darklight);
+    color: var(--color-primary);
+    font-family: var(--font-primary) !important;
+    font-size: 1rem;
+    line-height: 1.5;
+
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: var(--color-blue);
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+
+/* Base typesetting */
+
+h1 {
+    /* 24px */
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    line-height: 1;
+
+}
+
+h2 {
+    /* 16px */
+    font-size: 1rem;
+    color: var(--color-primary);
+
+}
+
+h3 {
+    /* 14px */
+    font-size: 0.9rem;
+    color: var(--color-primary);
+
+}
+
+h4 {
+    /* 12px */
+    font-size: 0.8rem;
+    color: var(--color-primary);
+
+}
+
+p {
+    /* 16px */
+    font-size: 1rem;
+    color: var(--color-secondary);
+}
+
+/* FLOW UTILITY */
+.flow>*+* {
+    margin-top: 1em;
+    /* border: 1px solid blue; */
+}
+
+button {
+    padding: 0.6em 1em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: var(--color-blue);
+    color: var(--color-light);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #633cffa0;
+}
+
+.text-center {
+    text-align: center;
+}
