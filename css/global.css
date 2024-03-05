@@ -87,6 +87,8 @@ a:not([class]) {
     text-decoration: none;
 }
 
+
+
 /* Make images easier to work with */
 img,
 picture {
@@ -172,4 +174,24 @@ button:hover {
 
 .text-center {
     text-align: center;
+}
+
+.logo--box {
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.logo--box i {
+    font-size: 2rem;
+    color: var(--color-blue);
+    margin-top: 2.5rem;
+}
+
+.logo--box .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
 }
