@@ -70,6 +70,10 @@ a {
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
+
+
+/* NOTES PAGE  */
+
 .notes--listing {
     display: flex;
     flex-wrap: wrap;
@@ -84,7 +88,7 @@ a {
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
-.note--card .note--title {
+.note--title {
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -95,19 +99,34 @@ a {
     margin-bottom: 1rem;
 }
 
+.note--content {
+    font-size: 1rem;
+    color: var(--color-grey);
+    margin-bottom: 1rem;
+    max-width: 60ch;
+}
+
 .note--card .note--info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
-.note--card .note--date {
+.note--info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.note--date {
     font-size: 0.8rem;
     color: var(--color-grey);
 }
 
-.note--card .note--actions {
+.note--actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -221,4 +240,14 @@ a {
 
 .file-input i {
     margin-right: 8px;
+}
+
+
+
+
+/* Notes details page */
+
+.note--details {
+    display: flex;
+    gap: 2rem;
 }

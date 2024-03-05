@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <!-- Fontawesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Css -->
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/dashboard.css" />
+</head>
+
+<body class="dashboard--page">
+  <aside class="sidebar">
+    <div class="logo--box">
+      <i class="fa fa-cloud"></i>
+
+      <p class="logo">pu-network</p>
+    </div>
+
+    <nav>
+      <a class="navbar" href="#">Home</a>
+      <a class="navbar active" href="#">Notes</a>
+      <a class="navbar" href="#">Notices</a>
+      <a class="navbar" href="#">Documents</a>
+      <a class="navbar" href="#">Feedback</a>
+    </nav>
+  </aside>
+  <main class="main-content">
+    <header class="header">
+      <div>
+        <h2>Notes</h2>
+        <p>Welcome Saugat!</p>
+      </div>
+
+      <button id="addNotesBtn">Add New Notes</button>
+    </header>
+
+    <section class="notes--listing">
+      <div class="note--card">
+        <h3 class="note--title">Maths Notes</h3>
+
+        <div class="note--info">
+          <p class="note--date">
+            <i class="fa-solid fa-circle-user"></i> <span>Saugat Rimal</span>
+          </p>
+          <p class="note--date">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span>12th May, 2021</span>
+          </p>
+        </div>
+
+        <p class="note--content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+          deleniti quae recusandae eaque earum suscipit debitis quos, eum
+        </p>
+
+        <a href="/note-details.html"><button>View Details</button></a>
+      </div>
+
+      <div class="note--card">
+        <h3 class="note--title">Maths Notes</h3>
+
+        <div class="note--info">
+          <p class="note--date">
+            <i class="fa-solid fa-circle-user"></i> <span>Saugat Rimal</span>
+          </p>
+          <p class="note--date">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span>12th May, 2021</span>
+          </p>
+        </div>
+
+        <p class="note--content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+          deleniti quae recusandae eaque earum suscipit debitis quos, eum
+        </p>
+
+        <a href="/note-details.html"><button>View Details</button></a>
+      </div>
+
+      <div class="note--card">
+        <h3 class="note--title">Maths Notes</h3>
+
+        <div class="note--info">
+          <p class="note--date">
+            <i class="fa-solid fa-circle-user"></i> <span>Saugat Rimal</span>
+          </p>
+          <p class="note--date">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span>12th May, 2021</span>
+          </p>
+        </div>
+
+        <p class="note--content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+          deleniti quae recusandae eaque earum suscipit debitis quos, eum
+        </p>
+
+        <a href="/note-details.html"><button>View Details</button></a>
+      </div>
+
+      <div class="note--card">
+        <h3 class="note--title">Maths Notes</h3>
+
+        <div class="note--info">
+          <p class="note--date">
+            <i class="fa-solid fa-circle-user"></i> <span>Saugat Rimal</span>
+          </p>
+          <p class="note--date">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span>12th May, 2021</span>
+          </p>
+        </div>
+
+        <p class="note--content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+          deleniti quae recusandae eaque earum suscipit debitis quos, eum
+        </p>
+
+        <a href="/note-details.html"><button>View Details</button></a>
+      </div>
+
+      <div class="note--card">
+        <h3 class="note--title">Maths Notes</h3>
+
+        <div class="note--info">
+          <p class="note--date">
+            <i class="fa-solid fa-circle-user"></i> <span>Saugat Rimal</span>
+          </p>
+          <p class="note--date">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span>12th May, 2021</span>
+          </p>
+        </div>
+
+        <p class="note--content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+          deleniti quae recusandae eaque earum suscipit debitis quos, eum
+        </p>
+
+        <a href="/note-details.html"><button>View Details</button></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Popup Box -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">
+        <i class="fa-regular fa-circle-xmark"></i></span>
+      <h2 class="popup--title">Add New Note</h2>
+
+      <form class="form--box">
+        <div class="label--box">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+
+        <div class="label--box">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description"></textarea>
+        </div>
+
+        <div class="label--box">
+          <label class="file-input">
+            <i class="fa fa-upload"></i> Choose PDF File
+            <input type="file" id="pdfFile" name="pdfFile" />
+          </label>
+        </div>
+
+        <button type="submit">Add Note</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Function to open popup
+    document
+      .getElementById("addNotesBtn")
+      .addEventListener("click", function () {
+        document.getElementById("popup").style.display = "block";
+      });
+
+    // Function to close popup
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
