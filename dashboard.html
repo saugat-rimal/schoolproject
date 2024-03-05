@@ -41,7 +41,7 @@
           <p>Welcome Saugat!</p>
         </div>
 
-        <button>Add New Notes</button>
+        <button id="addNotesBtn">Add New Notes</button>
       </header>
 
       <section class="notes--listing">
@@ -151,5 +151,50 @@
         </div>
       </section>
     </main>
+
+    <!-- Popup Box -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">
+          <i class="fa-regular fa-circle-xmark"></i
+        ></span>
+        <h2 class="popup--title">Add New Note</h2>
+
+        <form class="form--box">
+          <div class="label--box">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+
+          <div class="label--box">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+          </div>
+
+          <div class="label--box">
+            <label class="file-input">
+              <i class="fa fa-upload"></i> Choose PDF File
+              <input type="file" id="pdfFile" name="pdfFile" />
+            </label>
+          </div>
+
+          <button type="submit">Add Note</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Function to open popup
+      document
+        .getElementById("addNotesBtn")
+        .addEventListener("click", function () {
+          document.getElementById("popup").style.display = "block";
+        });
+
+      // Function to close popup
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
   </body>
 </html>
