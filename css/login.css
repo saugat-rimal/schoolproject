@@ -1,10 +1,13 @@
 .login-signup--page {
-    height: 99vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 3rem;
+
+    margin: 0px;
+    padding: 0px;
 }
 
 .login-signup--box {

@@ -1,0 +1,97 @@
+.container {
+    min-height: 100dvh;
+    background: url('https://res.cloudinary.com/dfkn1kzs0/image/upload/v1588506071/bg-desktop_rfy0wb.svg');
+    background-color: #674BAF;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0 20px;
+}
+
+nav {
+    text-align: left;
+    margin: -45px 0;
+    margin-left: 5%;
+}
+
+.logo--box i {
+    color: var(--color-lightblue);
+    margin-top: -5px;
+
+}
+
+.logo--box .logo {
+    color: var(--color-lightblue);
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--color-light);
+}
+
+p {
+    font-size: 1rem;
+    margin-block: 2rem;
+    color: var(--color-light);
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.5em 2em;
+    background-color: var(--color-light);
+    color: #674BAF;
+    box-shadow: 0 8px 17px -8px black;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-lightblue);
+}
+
+button:hover {
+    color: var(--color-light);
+    background: rgba(103, 75, 175, 0.9);
+}
+
+
+
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 4rem;
+    text-align: left;
+    padding: 4rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .main-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        gap: 2rem;
+
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .main-section img {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+}

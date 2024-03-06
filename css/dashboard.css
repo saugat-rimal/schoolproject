@@ -1,18 +1,79 @@
 .dashboard--page {
     display: flex;
     flex-direction: row;
-    height: 99dvh;
+    height: 100%;
+    min-height: 100dvh;
+    padding: 0px;
+    margin: 0px;
 }
 
 
 .sidebar {
     /* background-color: #f4f4f4; */
+    /* padding: 0; */
     width: 250px;
+
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 8rem;
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header--mobile {
+    display: none;
+}
+
+/* CSS for tablets and mobile devices */
+@media only screen and (max-width: 768px) {
+    .dashboard--page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .header--mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 10px;
+
+        background-color: var(--color-light);
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        border-radius: 20px;
+    }
+
+    .header--mobile nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+
+    .header--mobile .logo--box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header--mobile .logo--box .logo,
+    .header--mobile .logo--box i {
+        font-size: 1.5rem;
+        margin-top: -5px;
+    }
+
+
+
 }
 
 .sidebar .logo--box i {
@@ -32,21 +93,26 @@
 }
 
 .sidebar nav .navbar {
-    background-color: var(--color-lightblue);
+    background-color: var(--color-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 1rem;
     font-weight: 550;
-    color: var(--color-blue);
-    border-radius: 20px 0 0 20px;
+    color: var(--color-primary);
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
 }
 
 .sidebar nav .navbar:hover {
-    background-color: var(--color-light);
-    color: var(--color-primary);
+    background-color: var(--color-lightblue);
+    color: var(--color-blue);
 }
 
 .sidebar nav .navbar.active {
-    background-color: var(--color-light);
-    color: var(--color-primary);
+    background-color: var(--color-lightblue);
+    color: var(--color-blue);
 }
 
 a {
@@ -60,6 +126,8 @@ a {
 
 .header {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
@@ -82,6 +150,7 @@ a {
 
 .note--card {
     max-width: 340px;
+    /* flex: 1; */
     background-color: var(--color-light);
     padding: 1rem;
     border-radius: 20px;
@@ -242,12 +311,14 @@ a {
     margin-right: 8px;
 }
 
-
-
-
 /* Notes details page */
 
 .note--details {
     display: flex;
     gap: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+    .note--details {
+        flex-direction: column;
+    }
